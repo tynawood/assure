@@ -1,0 +1,1522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, width=device-width" name="viewport">
+	<title>Page Palettes - Material</title>
+
+	<!-- css -->
+	<link href="css/base.min.css" rel="stylesheet">
+
+	<!-- favicon -->
+	<!-- ... -->
+
+	<!-- ie -->
+		<!--[if lt IE 9]>
+			<script src="js/html5shiv.js" type="text/javascript"></script>
+			<script src="js/respond.js" type="text/javascript"></script>
+		<![endif]-->
+
+		<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true"></script>
+
+
+
+ <!--<script>
+    var map;    // Google map object
+    
+    // Initialize and display a google map
+    function Init()
+    {
+        // Create a Google coordinate object for where to initially center the map
+        var latlng = new google.maps.LatLng( 5.5811579, -0.3003959 );   // Washington, DC
+        
+        // Map options for how to display the Google map
+        var mapOptions = { zoom: 15, center: latlng  };
+        
+        // Show the Google map in the div with the attribute id 'map-canvas'.
+        map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+    }
+    
+    // Update the Google map for the user's inputted address
+    function UpdateMap( )
+    {
+        var geocoder = new google.maps.Geocoder();    // instantiate a geocoder object
+        
+        // Get the user's inputted address
+        var address = document.getElementById( "address" ).value;
+    
+        // Make asynchronous call to Google geocoding API
+        geocoder.geocode( { 'address': address }, function(results, status) {
+            var addr_type = results[0].types[0];    // type of address inputted that was geocoded
+            if ( status == google.maps.GeocoderStatus.OK ) 
+                ShowLocation( results[0].geometry.location, address, addr_type );
+            else     
+                alert("Geocode was not successful for the following reason: " + status);        
+        });
+    }
+    
+    // Show the location (address) on the map.
+    function ShowLocation( latlng, address, addr_type )
+    {
+        // Center the map at the specified location
+        map.setCenter( latlng );
+        
+        // Set the zoom level according to the address level of detail the user specified
+        var zoom = 12;
+        switch ( addr_type )
+        {
+        case "administrative_area_level_1"  : zoom = 10; break;      // user specified a state
+        case "locality"                     : zoom = 15; break;     // user specified a city/town
+        case "street_address"               : zoom = 10; break;     // user specified a street address
+        }
+        map.setZoom( zoom );
+        
+        // Place a Google Marker at the same location as the map center 
+        // When you hover over the marker, it will display the title
+        var marker = new google.maps.Marker( { 
+            position: latlng,     
+            map: map,      
+            title: address
+        });
+        
+        // Create an InfoWindow for the marker
+        var contentString = "" + address + "";  // HTML text to display in the InfoWindow
+        var infowindow = new google.maps.InfoWindow( { content: contentString } );
+        
+        // Set event to display the InfoWindow anchored to the marker when the marker is clicked.
+        google.maps.event.addListener( marker, 'click', function() { infowindow.open( map, marker ); });
+    }
+    
+    // Call the method 'Init()' to display the google map when the web page is displayed ( load event )
+    google.maps.event.addDomListener( window, 'load', Init );
+
+    </script>
+
+<style>
+    /* style settings for Google map */
+    #map-canvas
+    {
+        width : 110%;  /* map width */
+        height: 350px;  /* map height */
+        margin-left:-15px;
+    }
+    </style>-->
+
+
+
+
+
+
+
+
+</head>
+<body>
+	<header class="header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a class="menu-toggle" href="#menu">
+					<span class="access-hide">Menu</span>
+					<span class="icon icon-menu icon-lg" style="color:#fff"></span>
+					<span class="header-close icon icon-close icon-lg" style="color:red"></span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo" href="index.html"><img src="images/acc.png" alt="" style="position:absolute;"/></a>
+		<!--<ul class="nav nav-list pull-right">
+			<li>
+				<a class="menu-toggle" href="#search">
+					<span class="access-hide">Search</span>
+					<span class="icon icon-search icon-lg"></span>
+					<span class="header-close icon icon-close icon-lg"></span>
+				</a>
+			</li>
+			<li>
+				<a class="menu-toggle" href="#profile">
+					<span class="access-hide">John Smith</span>
+					<span class="avatar avatar-sm"><img alt="alt text for John Smith avatar" src="images/users/avatar-001.jpg"></span>
+					<span class="header-close icon icon-close icon-lg"></span>
+				</a>
+			</li>
+		</ul>-->
+	</header>
+	<nav class="menu" id="menu">
+		<div class="menu-scroll">
+			<div class="menu-wrap">
+				<div class="menu-content">
+				<!-- <div style="margin-top:50px;"></div> -->
+					<ul class="nav">
+						<li>
+							<a href="">News & Press</a>
+						</li>
+						<li>
+							<a href="">Products</a>
+						</li>
+<li>
+							<a href="">Buy Insurance</a>
+						</li>
+						<li>
+							<a href="">Branch Locator</a>
+						</li>
+						<li>
+							<a href="">Insurance Request</a>
+						</li>
+						
+						
+						
+						
+					</ul>
+					<hr >
+					<h4>Others</h4>
+			<ul class="nav">
+			
+						<li>
+							<a href="">Downloads</a>
+						</li>
+						<li>
+							<a href="">Feedback</a>
+							
+							
+						</li>
+						
+					</ul>
+					
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</nav>
+	<!--<nav class="menu menu-right" id="profile">
+		<div class="menu-scroll">
+			<div class="menu-wrap">
+				<div class="menu-top">
+					<div class="menu-top-img">
+						<img alt="John Smith" src="images/samples/landscape.jpg">
+					</div>
+					<div class="menu-top-info">
+						<a class="menu-top-user" href="javascript:void(0)"><span class="avatar pull-left"><img alt="alt text for John Smith avatar" src="images/users/avatar-001.jpg"></span>John Smith</a>
+					</div>
+				</div>
+				<div class="menu-content">
+					<ul class="nav">
+						<li>
+							<a href="javascript:void(0)"><span class="icon icon-account-box"></span>Profile Settings</a>
+						</li>
+						<li>
+							<a href="javascript:void(0)"><span class="icon icon-add-to-photos"></span>Upload Photo</a>
+						</li>
+						<li>
+							<a href="page-login.html"><span class="icon icon-exit-to-app"></span>Logout</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</nav>
+	<div class="menu menu-right menu-search" id="search">
+		<div class="menu-scroll">
+			<div class="menu-wrap">
+				<div class="menu-top">
+					<div class="menu-top-info">
+						<form class="menu-top-form">
+							<label class="access-hide" for="menu-search">Search</label>
+							<input class="form-control form-control-inverse menu-search-focus" id="menu-search" placeholder="Search" type="search">
+							<button class="access-hide" type="submit">Search</button>
+						</form>
+					</div>
+				</div>
+				<div class="menu-content">
+					<div class="menu-content-inner">
+						<p><strong>Saved Search Queries:</strong></p>
+						<ul>
+							<li><a href="javascript:void(0)">lorem ipsum dolor sit amet</a></li>
+							<li><a href="javascript:void(0)">consectetur adipiscing elit</a></li>
+							<li><a href="javascript:void(0)">sed ornare orci lorem</a></li>
+							<li><a href="javascript:void(0)">vel eleifend elit tempor eleifend</a></li>
+							<li><a href="javascript:void(0)">morbi feugiat aliquet justo</a></li>
+						</ul>
+						<hr>
+						<p><strong>Popular Search Queries:</strong></p>
+						<ul>
+							<li><a href="javascript:void(0)">id ullamcorper tortor lobortis eu</a></li>
+							<li><a href="javascript:void(0)">aliquam ut tellus arcu</a></li>
+							<li><a href="javascript:void(0)">cestibulum tortor purus</a></li>
+							<li><a href="javascript:void(0)">pretium ac dolor id</a></li>
+							<li><a href="javascript:void(0)">gravida molestie libero</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>-->
+	<div class="content">
+		<div class="content-heading">
+			<div class="container">
+				<h1 class="heading">Branch Locator</h1>
+			</div>
+		</div>
+
+
+
+
+
+
+
+
+		<div class="content-inner">
+			<div class="container" style="margin-left:20px;">
+				<div class="row">
+
+<h2 class="content-sub-heading">Choose a region</h2>
+				<div class="dropdown-wrap">
+					<div class="dropdown dropdown-inline">
+						<a class="btn dropdown-toggle-btn" data-toggle="dropdown" style="line-height:45px;"><img class="iconss" src="images/gs.png" alt="" />Greater Accra Region<span class="icon icon-keyboard-arrow-down margin-left-half" ></span></a>
+						<ul class="dropdown-menu">
+							<li style="margin-top:20px;"></li>
+							<li>
+								<p class="margin-half-top"><a class=" waves-button waves-effect" data-toggle="modal" href="#modal">Abeka Lapaz Branch</a></p>
+							</li>
+							<li>
+								<p class="margin-half-top"><a class=" waves-button waves-effect" data-toggle="modal" href="#tema">Tema Main  Branch</a></p>
+							</li>
+							<li>
+								<p class="margin-half-top"><a class=" waves-button waves-effect" data-toggle="modal" href="#alajo">Alajo(Agency)</a></p>
+							</li>
+
+
+							<li>
+								<p class="margin-half-top"><a class=" waves-button waves-effect" data-toggle="modal" href="#nima">Nima(Agency)</a></p>
+							</li>
+
+
+							<li>
+								<p class="margin-half-top"><a class=" waves-button waves-effect" data-toggle="modal" href="#darkuman"> Darkuman(Agency)</a></p>
+							</li>
+							<li>
+								<p class="margin-half-top"><a class=" waves-button waves-effect" data-toggle="modal" href="#odorkor">Odorkor(Agency)</a></p>
+							</li>
+							<li>
+								<p class="margin-half-top"><a class=" waves-button waves-effect" data-toggle="modal" href="#kaneshie">Kaneshie Branch</a></p>
+							</li>
+
+
+							<li>
+								<p class="margin-half-top"><a class=" waves-button waves-effect" data-toggle="modal" href="#achimota">Achimota  Branch</a></p>
+							</li>
+
+							<li>
+								<p class="margin-half-top"><a class=" waves-button waves-effect" data-toggle="modal" href="#kantamanto">Kantamanto Branch</a></p>
+							</li>
+							<li>
+								<p class="margin-half-top"><a class=" waves-button waves-effect" data-toggle="modal" href="#ashaiman">Ashaiman  Branch</a></p>
+							</li>
+							<li>
+								<p class="margin-half-top"><a class=" waves-button waves-effect" data-toggle="modal" href="#osu">Osu Oxford Street Branch</a></p>
+							</li>
+
+
+							<li>
+								<p class="margin-half-top"><a class=" waves-button waves-effect" data-toggle="modal" href="#north">North Industrial Area  Branch</a></p>
+							</li>
+
+
+							<li>
+								<p class="margin-half-top"><a class=" waves-button waves-effect" data-toggle="modal" href="#c1"> Tema Community 1 Branch</a></p>
+							</li>
+							<li>
+								<p class="margin-half-top"><a class=" waves-button waves-effect" data-toggle="modal" href="#industrial">Tema Industrial Area Branch</a></p>
+							</li>
+							<li>
+								<p class="margin-half-top"><a class=" waves-button waves-effect" data-toggle="modal" href="#madina">Madina Branch</a></p>
+							</li>
+
+
+							<li>
+								<p class="margin-half-top"><a class=" waves-button waves-effect" data-toggle="modal" href="#watson">Osu Watson House Branch</a></p>
+							</li>
+
+
+							<li>
+								<p class="margin-half-top"><a class=" waves-button waves-effect" data-toggle="modal" href="#castle">Castle Road Branch</a></p>
+							</li>
+							<li>
+								<p class="margin-half-top"><a class=" waves-button waves-effect" data-toggle="modal" href="#upsa">UPSA Branch</a></p>
+							</li>
+
+
+							<li>
+								<p class="margin-half-top"><a class=" waves-button waves-effect" data-toggle="modal" href="#nima1">Nima Branch</a></p>
+							</li>
+
+							<li>
+								<p class="margin-half-top"><a class=" waves-button waves-effect" data-toggle="modal" href="#okaishie">Okaishie Branch</a></p>
+							</li>
+							<li>
+								<p class="margin-half-top"><a class=" waves-button waves-effect" data-toggle="modal" href="#ring">Ring Road Central Branch</a></p>
+							</li>
+
+
+							<li>
+								<p class="margin-half-top"><a class=" waves-button waves-effect" data-toggle="modal" href="#south">South Industrial Area Branch</a></p>
+							</li>
+
+
+							<li>
+								<p class="margin-half-top"><a class=" waves-button waves-effect" data-toggle="modal" href="#spintex">Spintex Road Branch</a></p>
+							</li>
+
+
+							<li>
+								<p class="margin-half-top"><a class=" waves-button waves-effect" data-toggle="modal" href="#accra">Accra Newtown Branch</a></p>
+							</li>
+
+						</ul>
+					</div>
+				</div>
+
+
+
+
+
+				<div class="dropdown-wrap">
+					<div class="dropdown dropdown-inline">
+						<a class="btn dropdown-toggle-btn" data-toggle="dropdown" style="line-height:45px;"><img class="iconss" src="images/a.png" alt=""/> Ashanti Region<span class="icon icon-keyboard-arrow-down margin-left-half" ></span></a>
+						<ul class="dropdown-menu">
+							<li style="margin-top:20px;"></li>
+							<li>
+								<p class="margin-half-top"><a class=" waves-button waves-effect" data-toggle="modal" href="#alabar">Alabar(Agency)</a></p>
+							</li>
+							<li>
+								<p class="margin-half-top"><a class=" waves-button waves-effect" data-toggle="modal" href="#asafo">Asafo Branch</a></p>
+							</li>
+							<li>
+								<p class="margin-half-top"><a class=" waves-button waves-effect" data-toggle="modal" href="#suame">Suame Branch</a></p>
+							</li>
+
+							<li>
+								<p class="margin-half-top"><a class=" waves-button waves-effect" data-toggle="modal" href="#new1">New Amakom Branch</a></p>
+							</li>
+
+							<li>
+								<p class="margin-half-top"><a class=" waves-button waves-effect" data-toggle="modal" href="#adum">Adum Branch</a></p>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				
+
+
+<div class="dropdown-wrap">
+					<div class="dropdown dropdown-inline">
+						<a class="btn dropdown-toggle-btn" data-toggle="dropdown" style="line-height:45px;"><img class="iconss" src="images/w.png" alt=""/> Western Region<span class="icon icon-keyboard-arrow-down margin-left-half" ></span></a>
+						<ul class="dropdown-menu">
+							<li style="margin-top:20px;"></li>
+							<li>
+								<p class="margin-half-top"><a class=" waves-button waves-effect" data-toggle="modal" href="#enchi">Enchi Branch</a></p>
+							</li>
+							<li>
+								<p class="margin-half-top"><a class=" waves-button waves-effect" data-toggle="modal" href="#takoradi">Takoradi Branch</a></p>
+							</li>
+							<li>
+								<p class="margin-half-top"><a class=" waves-button waves-effect" data-toggle="modal" href="#sefwi">Sefwi-Wiawso Branch</a></p>
+							</li>
+
+							<li>
+								<p class="margin-half-top"><a class=" waves-button waves-effect" data-toggle="modal" href="#tarkwa">Tarkwa Branch</a></p>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+
+				
+				
+
+
+<div class="dropdown-wrap">
+					<div class="dropdown dropdown-inline">
+						<a class="btn dropdown-toggle-btn" data-toggle="dropdown" style="line-height:45px;"><img class="iconss" src="images/c.png" alt=""/> Central Region<span class="icon icon-keyboard-arrow-down margin-left-half" ></span></a>
+						<ul class="dropdown-menu">
+							<li style="margin-top:20px;"></li>
+							<li>
+								<p class="margin-half-top"><a class=" waves-button waves-effect" data-toggle="modal" href="#kasoa">Kasoa Branch</a></p>
+							</li>
+							<li>
+								<p class="margin-half-top"><a class=" waves-button waves-effect" data-toggle="modal" href="#kag">Kasoa (Agency)</a></p>
+							</li>
+							
+						</ul>
+					</div>
+				</div>
+
+
+
+				
+
+
+<div class="dropdown-wrap">
+					<div class="dropdown dropdown-inline">
+						<a class="btn dropdown-toggle-btn" data-toggle="dropdown" style="line-height:45px;"><img class="iconss" src="images/nn.png" alt=""/> Northern Region<span class="icon icon-keyboard-arrow-down margin-left-half" ></span></a>
+						<ul class="dropdown-menu">
+							<li style="margin-top:20px;"></li>
+							<li>
+								<p class="margin-half-top"><a class=" waves-button waves-effect" data-toggle="modal" href="#tamale">Tamale Branch</a></p>
+							</li>
+							
+						</ul>
+					</div>
+				</div>
+
+
+
+				
+
+
+<div class="dropdown-wrap">
+					<div class="dropdown dropdown-inline">
+						<a class="btn dropdown-toggle-btn" data-toggle="dropdown" style="line-height:45px;"><img class="iconss" src="images/bb.png" alt=""/> Brong Ahafo Region<span class="icon icon-keyboard-arrow-down margin-left-half" ></span></a>
+						<ul class="dropdown-menu">
+							<li style="margin-top:20px;"></li>
+							<li>
+								<p class="margin-half-top"><a class=" waves-button waves-effect" data-toggle="modal" href="#techiman"> Techiman Branch</a></p>
+							</li>
+							
+						</ul>
+					</div>
+				</div>
+
+
+
+
+				
+
+
+<div class="dropdown-wrap">
+					<div class="dropdown dropdown-inline">
+						<a class="btn dropdown-toggle-btn" data-toggle="dropdown" style="line-height:45px;"><img class="iconss" src="images/ee.png" alt=""/> Eastern Region<span class="icon icon-keyboard-arrow-down margin-left-half" ></span></a>
+						<ul class="dropdown-menu">
+							<li style="margin-top:20px;"></li>
+							<li>
+								<p class="margin-half-top"><a class=" waves-button waves-effect" data-toggle="modal" href="#koforidua"> Koforidua (Agency)</a></p>
+							</li>
+					</div>
+				</div>
+
+
+
+				
+
+
+<div class="dropdown-wrap">
+					<div class="dropdown dropdown-inline">
+						<a class="btn dropdown-toggle-btn" data-toggle="dropdown" style="line-height:45px;"><img class="iconss" src="images/vv.png" alt=""/> Volta Region<span class="icon icon-keyboard-arrow-down margin-left-half" ></span></a>
+						<ul class="dropdown-menu">
+							<li style="margin-top:20px;"></li>
+							<li>
+								<p class="margin-half-top"><a class=" waves-button waves-effect" data-toggle="modal" href="#ho"> Ho Branch</a></p>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+
+
+</div>
+		</div>			
+						<!-- <div style="margin-top:10px;">
+        <label for="address"> Address:</label>
+       
+        <input type="text" id="address" value="" />
+       
+        <button id="vani" onclick="UpdateMap()" >Locate</button>
+
+    </div>
+ <div id='map-canvas' style="position:relative;top:5px;" ></div><br/>-->
+   
+
+
+						<!--<h2 class="content-sub-heading">Default Page Colour</h2>
+						<p>Default page colour is <code>$brand-color</code>.</p>
+						<h3 class="content-sub-heading">Other Page Colours</h3>-->
+					<!--	<div class="tile-wrap tile-wrap-animation">
+							<a class="tile" href="page-palette-blue.html">
+								<div class="tile-inner">
+									<span class="icon icon-redeem " style="" ></span><span>nav 1</span><span class="icon icon-keyboard-arrow-right pull-right" style="color:#ef7f22"></span>
+								</div>
+							</a>
+							<p> </p>
+							<a class="tile" href="page-palette-green.html">
+								<div class="tile-inner">
+									<span>nav 1</span><span class="icon icon-keyboard-arrow-right pull-right" style="color:#ef7f22"></span>
+								</div>
+							</a>
+							<p> </p>
+							<a class="tile" href="page-palette-purple.html">
+								<div class="tile-inner">
+									<span>nav 3</span><span class="icon icon-keyboard-arrow-right pull-right" style="color:#ef7f22"></span>
+								</div>
+							</a>
+							<p> </p>
+							<a class="tile" href="page-palette-red.html">
+								<div class="tile-inner">
+									<span>nav 4</span><span class="icon icon-keyboard-arrow-right pull-right" style="color:#ef7f22"></span>
+								</div>
+							</a>
+							<p> </p>
+							<a class="tile" href="page-palette-yellow.html">
+								<div class="tile-inner">
+									<span>nav 5</span><span class="icon icon-keyboard-arrow-right pull-right" style="color:#ef7f22"></span>
+								</div>
+							</a>
+							<p> </p>
+							<a class="tile" href="page-palette-yellow.html">
+								<div class="tile-inner">
+									<span>nav 6</span><span class="icon icon-keyboard-arrow-right pull-right" style="color:#ef7f22"></span>
+								</div>
+							</a>
+							<p> </p>
+							<a class="tile" href="page-palette-yellow.html">
+								<div class="tile-inner">
+									<span>nav 7</span><span class="icon icon-keyboard-arrow-right pull-right" style="color:#ef7f22"></span>
+								</div>
+							</a>
+							<p> </p>
+							<a class="tile" href="page-palette-yellow.html">
+								<div class="tile-inner">
+									<span>nav 8</span><span class="icon icon-keyboard-arrow-right pull-right" style="color:#ef7f22"></span>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<!--	<footer class="footer">
+		<div class="container">
+			<p>Material</p>
+		</div>
+	</footer>-->
+<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-red fbtn-lg" data-toggle="dropdown"><span class="fbtn-text">Links</span><span class="fbtn-ori icon icon-open-in-new"></span><span class="fbtn-sub icon icon-close"></span></a>
+			<div class="fbtn-dropdown">
+				<a class="fbtn" href="request.html" ><span class="fbtn-text">Make a Request</span><span class="icon icon-content-paste"></span></a> 
+				<a class="fbtn fbtn-blue" href="makeaccount.html" ><span class="fbtn-text">Open An Account</span><span class="icon icon-folder-open"></span></a>
+				<a class="fbtn fbtn-alt" href="tel:+233267141981" ><span class="fbtn-text">Tap to Call</span><span class="icon icon-phone"></span></a>
+			</div>
+		</div>
+	</div>
+
+	<div aria-hidden="true" class="modal fade" id="modal" role="dialog" tabindex="-1">
+		<div class="modal-dialog modal-xs">
+			<div class="modal-content">
+				<div class="modal-heading">
+					<a class="modal-close" data-dismiss="modal">&times;</a>
+					  
+					<p><strong>* AbekaLapaz Branch</strong></p>
+					<p>Former Bambolino Restaurant<br>
+Accra- Akweteman Road
+AbekaLapaz, Accra<br>
+T: +233 (0) 302 420070 –5, +233
+(0) 302 420075	</p>
+					
+				</div>
+				<div class="modal-footer">
+					<p class="text-right"><button class="btn btn-flat btn-alt" data-dismiss="modal" type="button">Close</button><button class="btn btn-flat btn-alt" data-dismiss="modal" type="button">OK</button></p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+<div aria-hidden="true" class="modal fade" id="tema" role="dialog" tabindex="-1">
+		<div class="modal-dialog modal-xs">
+			<div class="modal-content">
+				<div class="modal-heading">
+					<a class="modal-close" data-dismiss="modal">&times;</a>
+					  
+					<p><strong>Tema Main  Branch</strong></p>
+					<p>Off Fishing Harbour Road<br>
+Opposite Maersk Line,
+Tema<br>
+T: +233 (0) 244 335939,
++233 (0) 244 335941
+F: +233 (0) 303 202211	</p>
+					
+				</div>
+				<div class="modal-footer">
+					<p class="text-right"><button class="btn btn-flat btn-alt" data-dismiss="modal" type="button">Close</button><button class="btn btn-flat btn-alt" data-dismiss="modal" type="button">OK</button></p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+	<div aria-hidden="true" class="modal fade" id="alajo" role="dialog" tabindex="-1">
+		<div class="modal-dialog modal-xs">
+			<div class="modal-content">
+				<div class="modal-heading">
+					<a class="modal-close" data-dismiss="modal">&times;</a>
+					  
+					<p><strong>* Alajo(Agency)</strong></p>
+					<p>Star Oil refueling Service Station
+Alajo	</p>
+					
+				</div>
+				<div class="modal-footer">
+					<p class="text-right"><button class="btn btn-flat btn-alt" data-dismiss="modal" type="button">Close</button><button class="btn btn-flat btn-alt" data-dismiss="modal" type="button">OK</button></p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+<div aria-hidden="true" class="modal fade" id="nima" role="dialog" tabindex="-1">
+		<div class="modal-dialog modal-xs">
+			<div class="modal-content">
+				<div class="modal-heading">
+					<a class="modal-close" data-dismiss="modal">&times;</a>
+					  
+					<p><strong>* Nima(Agency)</strong></p>
+					<p>House No. 114/12
+Nima market	</p>
+					
+				</div>
+				<div class="modal-footer">
+					<p class="text-right"><button class="btn btn-flat btn-alt" data-dismiss="modal" type="button">Close</button><button class="btn btn-flat btn-alt" data-dismiss="modal" type="button">OK</button></p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+<div aria-hidden="true" class="modal fade" id="darkuman" role="dialog" tabindex="-1">
+		<div class="modal-dialog modal-xs">
+			<div class="modal-content">
+				<div class="modal-heading">
+					<a class="modal-close" data-dismiss="modal">&times;</a>
+					  
+					<p><strong>* Darkuman(Agency)</strong></p>
+					<p>Shop No.3,
+Darkuman High Street	</p>
+					
+				</div>
+				<div class="modal-footer">
+					<p class="text-right"><button class="btn btn-flat btn-alt" data-dismiss="modal" type="button">Close</button><button class="btn btn-flat btn-alt" data-dismiss="modal" type="button">OK</button></p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+	<div aria-hidden="true" class="modal fade" id="odorkor" role="dialog" tabindex="-1">
+		<div class="modal-dialog modal-xs">
+			<div class="modal-content">
+				<div class="modal-heading">
+					<a class="modal-close" data-dismiss="modal">&times;</a>
+					  
+					<p><strong>* Odorkor(Agency)</strong></p>
+					<p>No. 9 at House No. B158/11<br>
+Kwashieman Road, Odorkor, Accra.<br>
+	</p>
+					
+				</div>
+				<div class="modal-footer">
+					<p class="text-right"><button class="btn btn-flat btn-alt" data-dismiss="modal" type="button">Close</button><button class="btn btn-flat btn-alt" data-dismiss="modal" type="button">OK</button></p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+<div aria-hidden="true" class="modal fade" id="kaneshie" role="dialog" tabindex="-1">
+		<div class="modal-dialog modal-xs">
+			<div class="modal-content">
+				<div class="modal-heading">
+					<a class="modal-close" data-dismiss="modal">&times;</a>
+					  
+					<p><strong>* Kaneshie Branch</strong></p>
+					<p>Winneba Road<br>
+Near Pamprom Traffic Light
+Kaneshie, Accra<br>
+T: +233 (0) 302 662370 , +233 (0) 302 662399
+F: +233 (0) 302672351</p>
+					
+				</div>
+				<div class="modal-footer">
+					<p class="text-right"><button class="btn btn-flat btn-alt" data-dismiss="modal" type="button">Close</button><button class="btn btn-flat btn-alt" data-dismiss="modal" type="button">OK</button></p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+<div aria-hidden="true" class="modal fade" id="achimota" role="dialog" tabindex="-1">
+		<div class="modal-dialog modal-xs">
+			<div class="modal-content">
+				<div class="modal-heading">
+					<a class="modal-close" data-dismiss="modal">&times;</a>
+					  
+					<p><strong>Achimota  Branch</strong></p>
+					<p>Nsawam Road<br>
+Near Neoplan Station
+Achimota, Accra<br>
+T: +233 (0) 302 41908 0 - 3
++233 (0) 302 419085</p>
+					
+				</div>
+				<div class="modal-footer">
+					<p class="text-right"><button class="btn btn-flat btn-alt" data-dismiss="modal" type="button">Close</button><button class="btn btn-flat btn-alt" data-dismiss="modal" type="button">OK</button></p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+
+<div aria-hidden="true" class="modal fade" id="kantamanto" role="dialog" tabindex="-1">
+		<div class="modal-dialog modal-xs">
+			<div class="modal-content">
+				<div class="modal-heading">
+					<a class="modal-close" data-dismiss="modal">&times;</a>
+					 
+					<p><strong>* Kantamanto Branch</strong></p>
+					<p>Tarzan House<br>
+Kantamanto Market, Accra<br>
+T: +233 (0) 302 673521, +233(0) 302 673286
+F: +233 (0) 302 673230	</p>
+					
+				</div>
+				<div class="modal-footer">
+					<p class="text-right"><button class="btn btn-flat btn-alt" data-dismiss="modal" type="button">Close</button><button class="btn btn-flat btn-alt" data-dismiss="modal" type="button">OK</button></p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+<div aria-hidden="true" class="modal fade" id="ashaiman" role="dialog" tabindex="-1">
+		<div class="modal-dialog modal-xs">
+			<div class="modal-content">
+				<div class="modal-heading">
+					<a class="modal-close" data-dismiss="modal">&times;</a>
+					  
+					<p><strong>* Ashaiman  Branch</strong></p>
+					<p>Accra-Ada Road<br>
+Ashaiman<br>
+T: +233 (0) 303 300124, + 233 (0) 303 300122,
+F: +233 (0) 303 300102	</p>
+					
+				</div>
+				<div class="modal-footer">
+					<p class="text-right"><button class="btn btn-flat btn-alt" data-dismiss="modal" type="button">Close</button><button class="btn btn-flat btn-alt" data-dismiss="modal" type="button">OK</button></p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+<div aria-hidden="true" class="modal fade" id="osu" role="dialog" tabindex="-1">
+		<div class="modal-dialog modal-xs">
+			<div class="modal-content">
+				<div class="modal-heading">
+					<a class="modal-close" data-dismiss="modal">&times;</a>
+					 
+					<p><strong>* Osu Oxford Street Branch</strong></p>
+					<p>41 Cantonments Road<br>
+Next to Osu Food Court<br>Oxford Street, Osu<br>
+T: +233 (0) 302 774290	</p>
+					
+				</div>
+				<div class="modal-footer">
+					<p class="text-right"><button class="btn btn-flat btn-alt" data-dismiss="modal" type="button">Close</button><button class="btn btn-flat btn-alt" data-dismiss="modal" type="button">OK</button></p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+<div aria-hidden="true" class="modal fade" id="north" role="dialog" tabindex="-1">
+		<div class="modal-dialog modal-xs">
+			<div class="modal-content">
+				<div class="modal-heading">
+					<a class="modal-close" data-dismiss="modal">&times;</a>
+					  
+					<p><strong>North Industrial Area  Branch</strong></p>
+					<p>Dadeban Road<br>
+North Industrial Area, Accra.<br>
+T: +233 (0) 302 247855, +233 (0) 302 247944
+F: +233 (0) 302238157	</p>
+					
+				</div>
+				<div class="modal-footer">
+					<p class="text-right"><button class="btn btn-flat btn-alt" data-dismiss="modal" type="button">Close</button><button class="btn btn-flat btn-alt" data-dismiss="modal" type="button">OK</button></p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+<div aria-hidden="true" class="modal fade" id="c1" role="dialog" tabindex="-1">
+		<div class="modal-dialog modal-xs">
+			<div class="modal-content">
+				<div class="modal-heading">
+					<a class="modal-close" data-dismiss="modal">&times;</a>
+					  
+					<p><strong>* Tema Community 1 Branch</strong></p>
+					<p>Near Comm. 1 market<br>
+Tema<br>
+T: +233(0) 303 203095	</p>
+					
+				</div>
+				<div class="modal-footer">
+					<p class="text-right"><button class="btn btn-flat btn-alt" data-dismiss="modal" type="button">Close</button><button class="btn btn-flat btn-alt" data-dismiss="modal" type="button">OK</button></p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+<div aria-hidden="true" class="modal fade" id="industrial" role="dialog" tabindex="-1">
+		<div class="modal-dialog modal-xs">
+			<div class="modal-content">
+				<div class="modal-heading">
+					<a class="modal-close" data-dismiss="modal">&times;</a>
+					  
+					<p><strong>Tema Industrial Area Branch</strong></p>
+					<p>TT Brothers building<br>
+Off Tema – Aflao Road
+Tema<br>
+T:+233 (0) 289 557388	</p>
+					
+				</div>
+				<div class="modal-footer">
+					<p class="text-right"><button class="btn btn-flat btn-alt" data-dismiss="modal" type="button">Close</button><button class="btn btn-flat btn-alt" data-dismiss="modal" type="button">OK</button></p>
+				</div>
+			</div>
+		</div>
+	</div>
+<div aria-hidden="true" class="modal fade" id="madina" role="dialog" tabindex="-1">
+		<div class="modal-dialog modal-xs">
+			<div class="modal-content">
+				<div class="modal-heading">
+					<a class="modal-close" data-dismiss="modal">&times;</a>
+					  
+					<p><strong>* Madina Branch</strong></p>
+					<p>Hollywood Shopping Centre<br>
+Accra-Aburi Road
+Madina, Accra<br>
+T:+233 (0) 302520709, +233 (0) 302 520725
+F:+233 (0) 302520715	</p>
+					
+				</div>
+				<div class="modal-footer">
+					<p class="text-right"><button class="btn btn-flat btn-alt" data-dismiss="modal" type="button">Close</button><button class="btn btn-flat btn-alt" data-dismiss="modal" type="button">OK</button></p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+<div aria-hidden="true" class="modal fade" id="airport" role="dialog" tabindex="-1">
+		<div class="modal-dialog modal-xs">
+			<div class="modal-content">
+				<div class="modal-heading">
+					<a class="modal-close" data-dismiss="modal">&times;</a>
+					  
+					<p><strong>Airport Branch</strong></p>
+					<p>No. 34 Senchi Street<br>
+Airport Residential Area
+Accra<br>
+T: +233 (0) 302 736086 - 89	</p>
+					
+				</div>
+				<div class="modal-footer">
+					<p class="text-right"><button class="btn btn-flat btn-alt" data-dismiss="modal" type="button">Close</button><button class="btn btn-flat btn-alt" data-dismiss="modal" type="button">OK</button></p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+<div aria-hidden="true" class="modal fade" id="watson" role="dialog" tabindex="-1">
+		<div class="modal-dialog modal-xs">
+			<div class="modal-content">
+				<div class="modal-heading">
+					<a class="modal-close" data-dismiss="modal">&times;</a>
+					  
+					<p><strong>Osu Watson House Branch</strong></p>
+					<p>Watson House<br>
+Osu, La Road,
+Accra<br>
+T: +233 (0) 302 779152, +233 (0) 302 779530,
++233 (0) 244 335932
+F: +233 (0) 302 784856	</p>
+					
+				</div>
+				<div class="modal-footer">
+					<p class="text-right"><button class="btn btn-flat btn-alt" data-dismiss="modal" type="button">Close</button><button class="btn btn-flat btn-alt" data-dismiss="modal" type="button">OK</button></p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+<div aria-hidden="true" class="modal fade" id="castle" role="dialog" tabindex="-1">
+		<div class="modal-dialog modal-xs">
+			<div class="modal-content">
+				<div class="modal-heading">
+					<a class="modal-close" data-dismiss="modal">&times;</a>
+					  
+					<p><strong>Castle Road Branch</strong></p>
+					<p>Starlets ‘91 Road<br>
+Opposite Accra Sports Stadium
+Osu, Accra<br>
+T: +233 (0) 302 661630,+233(0) 302 666036
+F:+233 (0) 302680499	</p>
+					
+				</div>
+				<div class="modal-footer">
+					<p class="text-right"><button class="btn btn-flat btn-alt" data-dismiss="modal" type="button">Close</button><button class="btn btn-flat btn-alt" data-dismiss="modal" type="button">OK</button></p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+
+<div aria-hidden="true" class="modal fade" id="upsa" role="dialog" tabindex="-1">
+		<div class="modal-dialog modal-xs">
+			<div class="modal-content">
+				<div class="modal-heading">
+					<a class="modal-close" data-dismiss="modal">&times;</a>
+					  
+					<p><strong>UPSA Branch</strong></p>
+					<p>UPSA Premises<br>
+East Legon
+Accra<br>
+T: +233 (0) 289 559100, + 233(0) 289 555653
++233 (0) 302522197 +233 (0) 302 522196
+F: +233 (0) 302 522199	</p>
+					
+				</div>
+				<div class="modal-footer">
+					<p class="text-right"><button class="btn btn-flat btn-alt" data-dismiss="modal" type="button">Close</button><button class="btn btn-flat btn-alt" data-dismiss="modal" type="button">OK</button></p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+<div aria-hidden="true" class="modal fade" id="nima1" role="dialog" tabindex="-1">
+		<div class="modal-dialog modal-xs">
+			<div class="modal-content">
+				<div class="modal-heading">
+					<a class="modal-close" data-dismiss="modal">&times;</a>
+					  
+					<p><strong>Nima Branch</strong></p>
+					<p>House No. E2/11<br>
+Nima Roundabout
+Nima - Accra<br>
+T: +233 (0) 289 555654	</p>
+					
+				</div>
+				<div class="modal-footer">
+					<p class="text-right"><button class="btn btn-flat btn-alt" data-dismiss="modal" type="button">Close</button><button class="btn btn-flat btn-alt" data-dismiss="modal" type="button">OK</button></p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+<div aria-hidden="true" class="modal fade" id="okaishie" role="dialog" tabindex="-1">
+		<div class="modal-dialog modal-xs">
+			<div class="modal-content">
+				<div class="modal-heading">
+					<a class="modal-close" data-dismiss="modal">&times;</a>
+					  
+					<p><strong>Okaishie Branch</strong></p>
+					<p>House No D767 /A<br>
+Beach Avenue
+Tudu, Okaishie
+Accra<br>
+T: +233 (0)289 330050	</p>
+					
+				</div>
+				<div class="modal-footer">
+					<p class="text-right"><button class="btn btn-flat btn-alt" data-dismiss="modal" type="button">Close</button><button class="btn btn-flat btn-alt" data-dismiss="modal" type="button">OK</button></p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+<div aria-hidden="true" class="modal fade" id="ring" role="dialog" tabindex="-1">
+		<div class="modal-dialog modal-xs">
+			<div class="modal-content">
+				<div class="modal-heading">
+					<a class="modal-close" data-dismiss="modal">&times;</a>
+					  
+					<p><strong>* Ring Road Central Branch</strong></p>
+					<p>Abena Ateaa Towers<br>
+Ring Road
+Accra<br>
+T: +233 (0) 302 254701, +233 (0) 302 254741
++233 (0) 302 254738	</p>
+					
+				</div>
+				<div class="modal-footer">
+					<p class="text-right"><button class="btn btn-flat btn-alt" data-dismiss="modal" type="button">Close</button><button class="btn btn-flat btn-alt" data-dismiss="modal" type="button">OK</button></p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+<div aria-hidden="true" class="modal fade" id="south" role="dialog" tabindex="-1">
+		<div class="modal-dialog modal-xs">
+			<div class="modal-content">
+				<div class="modal-heading">
+					<a class="modal-close" data-dismiss="modal">&times;</a>
+					  
+					<p><strong>South Industrial Area Branch</strong></p>
+					<p>Sikkens House<br>
+Old Fadama Road
+South Industrial Area
+Accra<br>
+T: +233 (0) 302 781761, +233 (0) 302 784143	</p>
+					
+				</div>
+				<div class="modal-footer">
+					<p class="text-right"><button class="btn btn-flat btn-alt" data-dismiss="modal" type="button">Close</button><button class="btn btn-flat btn-alt" data-dismiss="modal" type="button">OK</button></p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+<div aria-hidden="true" class="modal fade" id="spintex" role="dialog" tabindex="-1">
+		<div class="modal-dialog modal-xs">
+			<div class="modal-content">
+				<div class="modal-heading">
+					<a class="modal-close" data-dismiss="modal">&times;</a>
+					  
+					<p><strong>Spintex Road Branch</strong></p>
+					<p>Blue Gate<br>
+Near Cocacola Roundabout
+Spintex Road	</p>
+					
+				</div>
+				<div class="modal-footer">
+					<p class="text-right"><button class="btn btn-flat btn-alt" data-dismiss="modal" type="button">Close</button><button class="btn btn-flat btn-alt" data-dismiss="modal" type="button">OK</button></p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+<div aria-hidden="true" class="modal fade" id="accra" role="dialog" tabindex="-1">
+		<div class="modal-dialog modal-xs">
+			<div class="modal-content">
+				<div class="modal-heading">
+					<a class="modal-close" data-dismiss="modal">&times;</a>
+					  
+					<p><strong>Accra Newtown Branch</strong></p>
+					<p>Accra Newtown Road<br>
+Former YAS Hotel Building
+Accra<br>
+T: +233(0) 307 021253	</p>
+					
+				</div>
+				<div class="modal-footer">
+					<p class="text-right"><button class="btn btn-flat btn-alt" data-dismiss="modal" type="button">Close</button><button class="btn btn-flat btn-alt" data-dismiss="modal" type="button">OK</button></p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+	<div aria-hidden="true" class="modal fade" id="alabar" role="dialog" tabindex="-1">
+		<div class="modal-dialog modal-xs">
+			<div class="modal-content">
+				<div class="modal-heading">
+					<a class="modal-close" data-dismiss="modal">&times;</a>
+					  
+					<p><strong>Alabar(Agency)</strong></p>
+					<p>House No. ZE Alabar<br>
+Kumasi	</p>
+					
+				</div>
+				<div class="modal-footer">
+					<p class="text-right"><button class="btn btn-flat btn-alt" data-dismiss="modal" type="button">Close</button><button class="btn btn-flat btn-alt" data-dismiss="modal" type="button">OK</button></p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+
+	<div aria-hidden="true" class="modal fade" id="asafo" role="dialog" tabindex="-1">
+		<div class="modal-dialog modal-xs">
+			<div class="modal-content">
+				<div class="modal-heading">
+					<a class="modal-close" data-dismiss="modal">&times;</a>
+					  
+					<p><strong>Asafo Branch</strong></p>
+					<p>Off Otumfuo Osei Tutu II Blvd<br>
+Asafo
+Kumasi<br>
+T:+233 (0) 322 196894	</p>
+					
+				</div>
+				<div class="modal-footer">
+					<p class="text-right"><button class="btn btn-flat btn-alt" data-dismiss="modal" type="button">Close</button><button class="btn btn-flat btn-alt" data-dismiss="modal" type="button">OK</button></p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+	<div aria-hidden="true" class="modal fade" id="suame" role="dialog" tabindex="-1">
+		<div class="modal-dialog modal-xs">
+			<div class="modal-content">
+				<div class="modal-heading">
+					<a class="modal-close" data-dismiss="modal">&times;</a>
+					  
+					<p><strong>* Suame Branch</strong></p>
+					<p>Offinso – Kumasi Road<br>
+Suame
+Kumasi<br>
+T:+233 (0) 322 083971 - 7
+F:+233 (0) 322 083970	</p>
+					
+				</div>
+				<div class="modal-footer">
+					<p class="text-right"><button class="btn btn-flat btn-alt" data-dismiss="modal" type="button">Close</button><button class="btn btn-flat btn-alt" data-dismiss="modal" type="button">OK</button></p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+	<div aria-hidden="true" class="modal fade" id="new1" role="dialog" tabindex="-1">
+		<div class="modal-dialog modal-xs">
+			<div class="modal-content">
+				<div class="modal-heading">
+					<a class="modal-close" data-dismiss="modal">&times;</a>
+					  
+					<p><strong>New Amakom Branch</strong></p>
+					<p>Near Angola Traffic Light<br>
+New Amakom
+Kumasi<br>
+T:+233 (0) 322 049250 - 2
++233 (0) 322 049253	</p>
+					
+				</div>
+				<div class="modal-footer">
+					<p class="text-right"><button class="btn btn-flat btn-alt" data-dismiss="modal" type="button">Close</button><button class="btn btn-flat btn-alt" data-dismiss="modal" type="button">OK</button></p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+	<div aria-hidden="true" class="modal fade" id="adum" role="dialog" tabindex="-1">
+		<div class="modal-dialog modal-xs">
+			<div class="modal-content">
+				<div class="modal-heading">
+					<a class="modal-close" data-dismiss="modal">&times;</a>
+					  
+					<p><strong>* Adum Branch</strong></p>
+					<p>Prempeh II Street<br>
+Adum, Kumasi<br>
+T:+233 (0) 322 083871 - 7
++233 (0) 322 083870	</p>
+					
+				</div>
+				<div class="modal-footer">
+					<p class="text-right"><button class="btn btn-flat btn-alt" data-dismiss="modal" type="button">Close</button><button class="btn btn-flat btn-alt" data-dismiss="modal" type="button">OK</button></p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+	<div aria-hidden="true" class="modal fade" id="enchi" role="dialog" tabindex="-1">
+		<div class="modal-dialog modal-xs">
+			<div class="modal-content">
+				<div class="modal-heading">
+					<a class="modal-close" data-dismiss="modal">&times;</a>
+					  
+					<p><strong>Enchi Branch</strong></p>
+					<p>Enchi Main Road<br>
+Adjacent former Court Building
+Enchi<br>
+T: +233 (0) 312 190381, +233 (0) 312 190382	</p>
+					
+				</div>
+				<div class="modal-footer">
+					<p class="text-right"><button class="btn btn-flat btn-alt" data-dismiss="modal" type="button">Close</button><button class="btn btn-flat btn-alt" data-dismiss="modal" type="button">OK</button></p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div aria-hidden="true" class="modal fade" id="takoradi" role="dialog" tabindex="-1">
+		<div class="modal-dialog modal-xs">
+			<div class="modal-content">
+				<div class="modal-heading">
+					<a class="modal-close" data-dismiss="modal">&times;</a>
+					  
+					<p><strong>* Takoradi Branch</strong></p>
+					<p>House No PT 131<br>
+Liberation Road
+Opposite Bank of Ghana<br>
+T: +233 (0) 312 032032</p>
+					
+				</div>
+				<div class="modal-footer">
+					<p class="text-right"><button class="btn btn-flat btn-alt" data-dismiss="modal" type="button">Close</button><button class="btn btn-flat btn-alt" data-dismiss="modal" type="button">OK</button></p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div aria-hidden="true" class="modal fade" id="sefwi" role="dialog" tabindex="-1">
+		<div class="modal-dialog modal-xs">
+			<div class="modal-content">
+				<div class="modal-heading">
+					<a class="modal-close" data-dismiss="modal">&times;</a>
+					  
+					<p><strong>* Sefwi-Wiawso Branch</strong></p>
+					<p>Opposite COCOBOD office<br>
+Sefwi - Mpomamu Road<br>
+T+233 (0) 322 192520	</p>
+					
+				</div>
+				<div class="modal-footer">
+					<p class="text-right"><button class="btn btn-flat btn-alt" data-dismiss="modal" type="button">Close</button><button class="btn btn-flat btn-alt" data-dismiss="modal" type="button">OK</button></p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div aria-hidden="true" class="modal fade" id="tarkwa" role="dialog" tabindex="-1">
+		<div class="modal-dialog modal-xs">
+			<div class="modal-content">
+				<div class="modal-heading">
+					<a class="modal-close" data-dismiss="modal">&times;</a>
+					  
+					<p><strong>* Tarkwa Branch</strong></p>
+					<p>Post Office Road<br>
+T:+233 (0) 312 322606, +233 (0) 312 322619,
++233 (0) 312 322616
+F:+233 (0) 312	</p>
+					
+				</div>
+				<div class="modal-footer">
+					<p class="text-right"><button class="btn btn-flat btn-alt" data-dismiss="modal" type="button">Close</button><button class="btn btn-flat btn-alt" data-dismiss="modal" type="button">OK</button></p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+	<div aria-hidden="true" class="modal fade" id="kasoa" role="dialog" tabindex="-1">
+		<div class="modal-dialog modal-xs">
+			<div class="modal-content">
+				<div class="modal-heading">
+					<a class="modal-close" data-dismiss="modal">&times;</a>
+					  
+					<p><strong>Kasoa Branch</strong></p>
+					<p>I See Shopping Mall<br>
+
+						Opposite Petrosol Filling Station
+Bawjiase Road - Kasoa.<br>
+T+233 (0) 289 700506	
+				</div>
+				<div class="modal-footer">
+					<p class="text-right"><button class="btn btn-flat btn-alt" data-dismiss="modal" type="button">Close</button><button class="btn btn-flat btn-alt" data-dismiss="modal" type="button">OK</button></p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+	<div aria-hidden="true" class="modal fade" id="kag" role="dialog" tabindex="-1">
+		<div class="modal-dialog modal-xs">
+			<div class="modal-content">
+				<div class="modal-heading">
+					<a class="modal-close" data-dismiss="modal">&times;</a>
+					  
+					<p><strong>* Kasoa (Agency)</strong></p>
+					<p>Kasoa High Tension<br>
+Near Kia Station
+Off Kasoa Bawjiase Road
+Kasoa	</p>
+					
+				</div>
+				<div class="modal-footer">
+					<p class="text-right"><button class="btn btn-flat btn-alt" data-dismiss="modal" type="button">Close</button><button class="btn btn-flat btn-alt" data-dismiss="modal" type="button">OK</button></p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+	<div aria-hidden="true" class="modal fade" id="temale" role="dialog" tabindex="-1">
+		<div class="modal-dialog modal-xs">
+			<div class="modal-content">
+				<div class="modal-heading">
+					<a class="modal-close" data-dismiss="modal">&times;</a>
+					  
+					<p><strong>* Tamale Branch</strong></p>
+					<p>No. 2 Bank Street<br>
+Bank of Ghana Road
+Tamale<br>T:+233 (0) 372 027212 - 5, +233 (0) 372 027127
+F:+233 (0) 372 027 120	</p>
+					
+				</div>
+				<div class="modal-footer">
+					<p class="text-right"><button class="btn btn-flat btn-alt" data-dismiss="modal" type="button">Close</button><button class="btn btn-flat btn-alt" data-dismiss="modal" type="button">OK</button></p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+		<div aria-hidden="true" class="modal fade" id="techiman" role="dialog" tabindex="-1">
+		<div class="modal-dialog modal-xs">
+			<div class="modal-content">
+				<div class="modal-heading">
+					<a class="modal-close" data-dismiss="modal">&times;</a>
+					  
+					<p><strong>* Techiman Branch</strong></p>
+					<p>Block J, Sector 1<br>
+Tamale Road
+Techiman<br>T:+233 (0) 352 522060, +233 (0) 352 522062 / 3
++233 (0) 352 522083	</p>
+					
+				</div>
+				<div class="modal-footer">
+					<p class="text-right"><button class="btn btn-flat btn-alt" data-dismiss="modal" type="button">Close</button><button class="btn btn-flat btn-alt" data-dismiss="modal" type="button">OK</button></p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+		<div aria-hidden="true" class="modal fade" id="koforidua" role="dialog" tabindex="-1">
+		<div class="modal-dialog modal-xs">
+			<div class="modal-content">
+				<div class="modal-heading">
+					<a class="modal-close" data-dismiss="modal">&times;</a>
+					  
+					<p><strong>* Koforidua (Agency)</strong></p>
+					<p>Store Number AT16A<br>
+Near the roundabout
+Koforidua
+Opposite ADB	</p>
+					
+				</div>
+				<div class="modal-footer">
+					<p class="text-right"><button class="btn btn-flat btn-alt" data-dismiss="modal" type="button">Close</button><button class="btn btn-flat btn-alt" data-dismiss="modal" type="button">OK</button></p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+		<div aria-hidden="true" class="modal fade" id="ho" role="dialog" tabindex="-1">
+		<div class="modal-dialog modal-xs">
+			<div class="modal-content">
+				<div class="modal-heading">
+					<a class="modal-close" data-dismiss="modal">&times;</a>
+					  
+					<p><strong>Ho Branch</strong></p>
+					<p>Independence Street,<br>
+Near TogbeAfede’s Palace Court
+Civic Center - OLA Main Road
+Ho<br>T:+233 (0) 307 021252	</p>
+					
+				</div>
+				<div class="modal-footer">
+					<p class="text-right"><button class="btn btn-flat btn-alt" data-dismiss="modal" type="button">Close</button><button class="btn btn-flat btn-alt" data-dismiss="modal" type="button">OK</button></p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+	<script src="js/base.min.js" type="text/javascript"></script>
+</body>
+</html>

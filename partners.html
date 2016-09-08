@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, width=device-width" name="viewport">
+	<title>Page Palettes - Material</title>
+
+	<!-- css -->
+	<link href="css/base.min.css" rel="stylesheet">
+
+	<!-- favicon -->
+	<!-- ... -->
+
+	<!-- ie -->
+		<!--[if lt IE 9]>
+			<script src="js/html5shiv.js" type="text/javascript"></script>
+			<script src="js/respond.js" type="text/javascript"></script>
+		<![endif]-->
+
+
+	<script>
+			$(window).load(function(){
+				 $('.preloader').fadeOut(50);
+			});
+		</script>
+
+
+		<style>
+
+.preloader {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: white; /* background-color is important, or it will be see-through, and we don't want that! */
+    text-align: center;
+}
+
+.preloader img {
+     display: block;
+    margin: 30px auto;
+}
+</style>
+ <!--<script>
+    var map;    // Google map object
+    
+    // Initialize and display a google map
+    function Init()
+    {
+        // Create a Google coordinate object for where to initially center the map
+        var latlng = new google.maps.LatLng( 5.5811579, -0.3003959 );   // Washington, DC
+        
+        // Map options for how to display the Google map
+        var mapOptions = { zoom: 15, center: latlng  };
+        
+        // Show the Google map in the div with the attribute id 'map-canvas'.
+        map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+    }
+    
+    // Update the Google map for the user's inputted address
+    function UpdateMap( )
+    {
+        var geocoder = new google.maps.Geocoder();    // instantiate a geocoder object
+        
+        // Get the user's inputted address
+        var address = document.getElementById( "address" ).value;
+    
+        // Make asynchronous call to Google geocoding API
+        geocoder.geocode( { 'address': address }, function(results, status) {
+            var addr_type = results[0].types[0];    // type of address inputted that was geocoded
+            if ( status == google.maps.GeocoderStatus.OK ) 
+                ShowLocation( results[0].geometry.location, address, addr_type );
+            else     
+                alert("Geocode was not successful for the following reason: " + status);        
+        });
+    }
+    
+    // Show the location (address) on the map.
+    function ShowLocation( latlng, address, addr_type )
+    {
+        // Center the map at the specified location
+        map.setCenter( latlng );
+        
+        // Set the zoom level according to the address level of detail the user specified
+        var zoom = 12;
+        switch ( addr_type )
+        {
+        case "administrative_area_level_1"  : zoom = 10; break;      // user specified a state
+        case "locality"                     : zoom = 15; break;     // user specified a city/town
+        case "street_address"               : zoom = 10; break;     // user specified a street address
+        }
+        map.setZoom( zoom );
+        
+        // Place a Google Marker at the same location as the map center 
+        // When you hover over the marker, it will display the title
+        var marker = new google.maps.Marker( { 
+            position: latlng,     
+            map: map,      
+            title: address
+        });
+        
+        // Create an InfoWindow for the marker
+        var contentString = "" + address + "";  // HTML text to display in the InfoWindow
+        var infowindow = new google.maps.InfoWindow( { content: contentString } );
+        
+        // Set event to display the InfoWindow anchored to the marker when the marker is clicked.
+        google.maps.event.addListener( marker, 'click', function() { infowindow.open( map, marker ); });
+    }
+    
+    // Call the method 'Init()' to display the google map when the web page is displayed ( load event )
+    google.maps.event.addDomListener( window, 'load', Init );
+
+    </script>
+
+<style>
+    /* style settings for Google map */
+    #map-canvas
+    {
+        width : 110%;  /* map width */
+        height: 350px;  /* map height */
+        margin-left:-15px;
+    }
+    </style>-->
+
+
+
+
+
+
+
+
+</head>
+<body>
+	<header class="header">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a class="menu-toggle" href="#menu">
+					<span class="access-hide">Menu</span>
+					<span class="icon icon-menu icon-lg" style="color:#1e3f7c"></span>
+					<span class="header-close icon icon-close icon-lg"></span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo" href="main.html"><img src="images/acc.png" alt="" style="position:absolute;right:0px;"/></a>
+		<!--<ul class="nav nav-list pull-right">
+			<li>
+				<a class="menu-toggle" href="#search">
+					<span class="access-hide">Search</span>
+					<span class="icon icon-search icon-lg"></span>
+					<span class="header-close icon icon-close icon-lg"></span>
+				</a>
+			</li>
+			<li>
+				<a class="menu-toggle" href="#profile">
+					<span class="access-hide">John Smith</span>
+					<span class="avatar avatar-sm"><img alt="alt text for John Smith avatar" src="images/users/avatar-001.jpg"></span>
+					<span class="header-close icon icon-close icon-lg"></span>
+				</a>
+			</li>
+		</ul>-->
+	</header>
+	<nav class="menu" id="menu">
+		<div class="menu-scroll">
+			<div class="menu-wrap">
+				<div class="menu-content">
+						<ul class="nav">
+						<li>
+							<a href="products.html">Mpower Salary Account Benefits</a>
+						</li>
+						<li>
+							<a href="makeaccount.html">Open A Mpower Salary Account</a>
+						</li>
+<li>
+							<a href="live.html">Live Chat</a>
+						</li>
+						<li>
+							<a href="atm.html">ATM Locator</a>
+						</li>
+						<li>
+							<a href="branches.html">Branch Locator</a>
+						</li>
+						
+						
+						
+						
+					</ul>
+					<hr>
+					
+				
+					
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</nav>
+	<!--<nav class="menu menu-right" id="profile">
+		<div class="menu-scroll">
+			<div class="menu-wrap">
+				<div class="menu-top">
+					<div class="menu-top-img">
+						<img alt="John Smith" src="images/samples/landscape.jpg">
+					</div>
+					<div class="menu-top-info">
+						<a class="menu-top-user" href="javascript:void(0)"><span class="avatar pull-left"><img alt="alt text for John Smith avatar" src="images/users/avatar-001.jpg"></span>John Smith</a>
+					</div>
+				</div>
+				<div class="menu-content">
+					<ul class="nav">
+						<li>
+							<a href="javascript:void(0)"><span class="icon icon-account-box"></span>Profile Settings</a>
+						</li>
+						<li>
+							<a href="javascript:void(0)"><span class="icon icon-add-to-photos"></span>Upload Photo</a>
+						</li>
+						<li>
+							<a href="page-login.html"><span class="icon icon-exit-to-app"></span>Logout</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</nav>
+	<div class="menu menu-right menu-search" id="search">
+		<div class="menu-scroll">
+			<div class="menu-wrap">
+				<div class="menu-top">
+					<div class="menu-top-info">
+						<form class="menu-top-form">
+							<label class="access-hide" for="menu-search">Search</label>
+							<input class="form-control form-control-inverse menu-search-focus" id="menu-search" placeholder="Search" type="search">
+							<button class="access-hide" type="submit">Search</button>
+						</form>
+					</div>
+				</div>
+				<div class="menu-content">
+					<div class="menu-content-inner">
+						<p><strong>Saved Search Queries:</strong></p>
+						<ul>
+							<li><a href="javascript:void(0)">lorem ipsum dolor sit amet</a></li>
+							<li><a href="javascript:void(0)">consectetur adipiscing elit</a></li>
+							<li><a href="javascript:void(0)">sed ornare orci lorem</a></li>
+							<li><a href="javascript:void(0)">vel eleifend elit tempor eleifend</a></li>
+							<li><a href="javascript:void(0)">morbi feugiat aliquet justo</a></li>
+						</ul>
+						<hr>
+						<p><strong>Popular Search Queries:</strong></p>
+						<ul>
+							<li><a href="javascript:void(0)">id ullamcorper tortor lobortis eu</a></li>
+							<li><a href="javascript:void(0)">aliquam ut tellus arcu</a></li>
+							<li><a href="javascript:void(0)">cestibulum tortor purus</a></li>
+							<li><a href="javascript:void(0)">pretium ac dolor id</a></li>
+							<li><a href="javascript:void(0)">gravida molestie libero</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>-->
+	<div class="content">
+		<div class="content-heading">
+			<div class="container">
+				<h1 class="heading">Associate Partners</h1>
+			</div>
+		</div>
+
+
+
+
+
+
+
+
+		<div class="content-inner">
+			<div class="container">
+				<div class="row ">
+
+					<div class="col-lg-2 col-md-3">
+
+
+					
+						<!--<h2 class="content-sub-heading">Default Page Colour</h2>
+						<p>Default page colour is <code>$brand-color</code>.</p>
+						<h3 class="content-sub-heading">Other Page Colours</h3>-->
+						<div class="tile-wrap tile-wrap-animation">
+							<a class="tile" >
+								<div class="tile-inner">
+									<img class="" src="images/silver.png" alt="" /><span  style="font-size:20px;margin-left:5px;">4heem</span>
+								</div>
+							</a>
+							<p> </p>
+							<a class="tile" >
+								<div class="tile-inner">
+									<img class="" src="images/papa.png" alt="" /><span  style="font-size:20px;margin-left:5px;">Paapa's Pizza</span>
+								</div>
+							</a>
+							<p> </p>
+							<a class="tile" >
+								<div class="tile-inner">
+										<img class="" src="images/kidsplanet.png" alt="" /><span  style="font-size:20px;margin-left:5px;">Kids Planet</span>
+								</div>
+							</a>
+							<p> </p>
+							
+							<a class="tile" >
+								<div class="tile-inner">
+									<img class="" src="images/kids.png" alt="" /><span  style="font-size:20px;margin-left:5px;">Kids Cottage</span>
+								</div>
+							</a>
+							<p> </p>
+							<a class="tile" >
+								<div class="tile-inner">
+									<img class="" src="images/fi.png" alt="" /><span  style="font-size:20px;margin-left:5px;">Fi</span>
+								</div>
+							</a>
+							<p> </p>
+							
+							
+							<a class="tile" >
+								<div class="tile-inner">
+									<img class="" src="images/pills.png" alt="" /><span  style="font-size:20px;margin-left:5px;">ck</span>
+								</div>
+							</a>
+							<p> </p>
+
+							<a class="tile" >
+								<div class="tile-inner">
+									<img class="" src="images/ghana.png" alt="" /><span  style="font-size:20px;margin-left:5px;">Ghana life</span>
+								</div>
+							</a>
+							<p> </p>
+
+
+							<a class="tile" >
+								<div class="tile-inner">
+									<img class="" src="images/kcs.png" alt="" /><span  style="font-size:20px;margin-left:5px;">Kcs Fast Food</span>
+								</div>
+							</a>
+							<p> </p>
+
+							<a class="tile" >
+								<div class="tile-inner">
+									<img class="" src="images/rob.png" alt="" /><span  style="font-size:20px;margin-left:5px;">Robert And Sons Limited</span>
+								</div>
+							</a>
+							<p> </p>
+							
+
+							<a class="tile" >
+								<div class="tile-inner">
+									<img class="" src="images/ariel.png" alt="" /><span  style="font-size:20px;margin-left:5px;">Ariel's</span>
+								</div>
+							</a>
+							<p> </p>
+
+
+							<a class="tile" >
+								<div class="tile-inner">
+									<img class="" src="images/airtel.png" alt="" /><span  style="font-size:20px;margin-left:5px;">Airtel</span>
+								</div>
+							</a>
+							<p> </p>
+
+
+
+							<a class="tile" >
+								<div class="tile-inner">
+									<img class="" src="images/quick.png" alt="" /><span  style="font-size:20px;margin-left:5px;">Quick & Fine Supermarket</span>
+								</div>
+							</a>
+							<p> </p>
+
+
+							<a class="tile" >
+								<div class="tile-inner">
+									<img class="" src="images/pillstab.png" alt="" /><span  style="font-size:20px;margin-left:5px;">Pills & Tabs</span>
+								</div>
+							</a>
+							<p> </p>
+
+
+							<a class="tile" >
+								<div class="tile-inner">
+									<img class="" src="images/wapic.png" alt="" /><span  style="font-size:20px;margin-left:5px;">Wapic</span>
+								</div>
+							</a>
+							<p> </p>
+
+
+							<a class="tile" >
+								<div class="tile-inner">
+									<img class="" src="images/mds.png" alt="" /><span  style="font-size:20px;margin-left:5px;">MDS-LANCET</span>
+								</div>
+							</a>
+							<p> </p>
+
+							<a class="tile" >
+								<div class="tile-inner">
+									<img class="" src="images/foto.png" alt="" /><span  style="font-size:20px;margin-left:5px;">Fotostore</span>
+								</div>
+							</a>
+							<p> </p>
+
+
+							<a class="tile" >
+								<div class="tile-inner">
+									<img class="" src="images/lizzy.png" alt="" /><span  style="font-size:20px;margin-left:5px;">Lizzy Sports Complex</span>
+								</div>
+							</a>
+							<p> </p>
+
+							<a class="tile" >
+								<div class="tile-inner">
+									<img class="" src="images/total.png" alt="" /><span  style="font-size:20px;margin-left:5px;">Total House Clinic</span>
+								</div>
+							</a>
+							<p> </p>
+
+							<a class="tile" >
+								<div class="tile-inner">
+									<img class="" src="images/all.png" alt="" /><span  style="font-size:20px;margin-left:5px;">All Needs Limited</span>
+								</div>
+							</a>
+							<p> </p>
+
+
+							<a class="tile" >
+								<div class="tile-inner">
+									<img class="" src="images/epp.png" alt="" /><span  style="font-size:20px;margin-left:5px;">EPP Books Services</span>
+								</div>
+							</a>
+							<p> </p>
+
+
+
+							<a class="tile" >
+								<div class="tile-inner">
+									<img class="" src="images/bird.png" alt="" /><span  style="font-size:20px;margin-left:5px;">Silverbird Cinemas</span>
+								</div>
+							</a>
+							<p> </p>
+						</div>
+
+
+
+
+				
+			
+			<!-- <p>		
+<strong>Medical</strong><br>
+Roberts and Sons<br>
+Pills & tabs<br>
+Nima Pharmacy<br>
+MDS Lancet Laboratories<br>
+Total house clinic<br>
+<strong>Restaurants</strong>
+Papa's Pizza<br>
+KFC<br>
+<strong>Recreational centers</strong><br>
+Lizzy sports complex<br>
+silverbird cinema<br>
+Kids planet<br>
+<strong>Educational</strong><br>
+EPP book and services<br>
+<strong>Supermarket</strong><br>
+All need supermarket<br>
+ <strong>Telco</strong>
+Airtel Ghana<br>
+<strong>Photography</strong>
+Spendstre fotostore<br>
+Fonjo<br>
+<strong>Clothing line </strong>
+4heem
+
+</p>
+		
+ -->
+</p>
+</div>
+
+
+
+						<!-- <div style="margin-top:10px;">
+        <label for="address"> Address:</label>
+       
+        <input type="text" id="address" value="" />
+       
+        <button id="vani" onclick="UpdateMap()" >Locate</button>
+
+    </div>
+ <div id='map-canvas' style="position:relative;top:5px;" ></div><br/>-->
+   
+
+
+						<!--<h2 class="content-sub-heading">Default Page Colour</h2>
+						<p>Default page colour is <code>$brand-color</code>.</p>
+						<h3 class="content-sub-heading">Other Page Colours</h3>-->
+					<!--	<div class="tile-wrap tile-wrap-animation">
+							<a class="tile" href="page-palette-blue.html">
+								<div class="tile-inner">
+									<span class="icon icon-redeem " style="" ></span><span>nav 1</span><span class="icon icon-keyboard-arrow-right pull-right" style="color:#ef7f22"></span>
+								</div>
+							</a>
+							<p> </p>
+							<a class="tile" href="page-palette-green.html">
+								<div class="tile-inner">
+									<span>nav 1</span><span class="icon icon-keyboard-arrow-right pull-right" style="color:#ef7f22"></span>
+								</div>
+							</a>
+							<p> </p>
+							<a class="tile" href="page-palette-purple.html">
+								<div class="tile-inner">
+									<span>nav 3</span><span class="icon icon-keyboard-arrow-right pull-right" style="color:#ef7f22"></span>
+								</div>
+							</a>
+							<p> </p>
+							<a class="tile" href="page-palette-red.html">
+								<div class="tile-inner">
+									<span>nav 4</span><span class="icon icon-keyboard-arrow-right pull-right" style="color:#ef7f22"></span>
+								</div>
+							</a>
+							<p> </p>
+							<a class="tile" href="page-palette-yellow.html">
+								<div class="tile-inner">
+									<span>nav 5</span><span class="icon icon-keyboard-arrow-right pull-right" style="color:#ef7f22"></span>
+								</div>
+							</a>
+							<p> </p>
+							<a class="tile" href="page-palette-yellow.html">
+								<div class="tile-inner">
+									<span>nav 6</span><span class="icon icon-keyboard-arrow-right pull-right" style="color:#ef7f22"></span>
+								</div>
+							</a>
+							<p> </p>
+							<a class="tile" href="page-palette-yellow.html">
+								<div class="tile-inner">
+									<span>nav 7</span><span class="icon icon-keyboard-arrow-right pull-right" style="color:#ef7f22"></span>
+								</div>
+							</a>
+							<p> </p>
+							<a class="tile" href="page-palette-yellow.html">
+								<div class="tile-inner">
+									<span>nav 8</span><span class="icon icon-keyboard-arrow-right pull-right" style="color:#ef7f22"></span>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<!--	<footer class="footer">
+		<div class="container">
+			<p>Material</p>
+		</div>
+	</footer>-->
+<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-red fbtn-lg" data-toggle="dropdown"><span class="fbtn-text">Links</span><span class="fbtn-ori icon icon-open-in-new"></span><span class="fbtn-sub icon icon-close"></span></a>
+			<div class="fbtn-dropdown">
+				<a class="fbtn" href="request.html" ><span class="fbtn-text">Make a Request</span><span class="icon icon-content-paste"></span></a> 
+				<a class="fbtn fbtn-blue" href="makeaccount.html" ><span class="fbtn-text">Open An Account</span><span class="icon icon-folder-open"></span></a>
+				<a class="fbtn fbtn-alt" href="tel:+233267141981" ><span class="fbtn-text">Tap to Call</span><span class="icon icon-phone"></span></a>
+			</div>
+		</div>
+	</div>
+
+	<script src="js/base.min.js" type="text/javascript"></script>
+</body>
+</html>
