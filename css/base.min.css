@@ -10965,7 +10965,7 @@ text-align: center;
  .tile {
  	width:100%;
      background: #fff;
-   display: inline-flex;
+   display: inline-table;
      position:relative;
      margin-top: 20px;
     /* float: left;
