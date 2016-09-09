@@ -10870,8 +10870,100 @@
      margin-top: 0;
      margin-bottom: 0
  }
+
+
+.as1{
+	background: url(../images/as1.png);
+	width:50%;
+	height: 100px;
+		background-size: 100% 100%;
+	position: absolute;
+	top:325px;
+	left:0;
+	text-align: center;
+	color:#fff;
+	line-height: 170px;
+}
+
+.as2{
+	background: url(../images/as2.png);
+	width:50%;
+	height: 100px;
+	background-size: 100% 100%;
+	position: absolute;
+/*	top:325px;*/
+	left: 0;
+	top:420px;
+	text-align: center;
+	color:#fff;
+	line-height: 180px;
+}
+
+.as2 img{
+position: absolute;
+left:25%;
+top:-20%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.as3{
+	background: url(../images/as3.png);
+	width:50%;
+	height: 100px;
+	background-size: 100% 100%;
+	position: absolute;
+	top:325px;
+	right: 0;
+/*top:420px;*/
+text-align: center;
+	color:#fff;
+	line-height: 170px;
+}
+
+
+.as3 img{
+position: absolute;
+left:25%;
+top:-20%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.as4 img{
+position: absolute;
+left:25%;
+top:-20%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+.as1 img{
+position: absolute;
+left:25%;
+top:-10%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.as4{
+	background: url(../images/as4.png);
+	width:50%;
+	height: 100px;
+	background-size: 100% 100%;
+	position: absolute;
+/*	top:325px;*/
+	right: 0;
+top:420px;
+text-align: center;
+	color:#fff;
+	line-height: 180px;
+}
+
  
  .tile {
+ 	width:100%;
      background: #fff;
      display: block;
      -webkit-box-shadow: 0 -1px 0 #e0e0e0, 0 0 2px rgba(0, 0, 0, .1), 0 2px 4px rgba(0, 0, 0, .15);
@@ -11400,11 +11492,22 @@
  .header a {
      color: #fff
  }
+
+ .disp{
+background-size:100% 100%;
+ background: url(../images/disp.png)no-repeat;
+ position: absolute;
+ width:100%;
+ height:100%;
+ top:-5%;
+
+ }
  
  .header {
   background-color: #ec2127;
-/*  background: url(../images/bk2.png) no-repeat;*/
-/*    background-size:100% 100%; */
+ background: url(../images/bk2.png) no-repeat;
+  background-size:100% 100%; 
+border-bottom:3px solid #fff;
     box-shadow: 0 0 10px rgba(0,0,0,0.8);
      position: fixed;
      width:100%;

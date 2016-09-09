@@ -18,18 +18,18 @@
 			<script src="js/respond.js" type="text/javascript"></script>
 		<![endif]-->
 </head>
-<body>
+<body style="background:url(./images/acbg.png);">
 	<header class="header">
 		<ul class="nav nav-list pull-left">
 			<!--<li>
-				<a class="menu-toggle" href="#menu">
+				<!--<a class="menu-toggle" href="#menu">
 					<span class="access-hide">Menu</span>
 					<span class="icon icon-menu icon-lg" style="color:#1e3f7c"></span>
 					<span class="header-close icon icon-close icon-lg"></span>
 				</a>
 			</li>-->
 		</ul>
-		<a class="header-logo" href="main.html"><img src="images/acc.png" alt="" style="position:absolute;right:0px;"/></a>
+		<a class="header-logo" href="index.html"><img src="images/acc.png" alt="" style="position:absolute;left:0;"/></a>
 		<!--<ul class="nav nav-list pull-right">
 			<li>
 				<a class="menu-toggle" href="#search">
@@ -51,7 +51,7 @@
 		<div class="menu-scroll">
 			<div class="menu-wrap">
 				<div class="menu-content">
-				<ul class="nav">
+					<ul class="nav">
 						<li>
 							<a href="products.html">Products & Services</a>
 						</li>
@@ -150,77 +150,131 @@
 		</div>
 	</div>-->
 	<div class="content">
-		<div class="content-heading">
-			<script language="javascript">
+		<div class="">
+		 <div class="container">
+				
+			</div> 
+			<p> <br></p>
+		</div>
+		<div class="content-inner">
+			<div class="container">
 
-/*
-Random image slideshow- By Tyler Clarke (tyler@ihatecoffee.com)
-For this script and more, visit http://www.javascriptkit.com
-*/
 
-var delay=4000 //set delay in miliseconds
-var curindex=0
+				<div class="row">
 
-var randomimages=new Array()
+				<div class="disp"></div>
 
-	randomimages[0]="images/ban.png"
-	randomimages[1]="images/bak.png"
-	randomimages[2]="images/bac.png"
-	randomimages[3]="images/b11.png"
-	randomimages[4]="images/b12.png"
-	randomimages[5]="images/b14.png"
-	randomimages[6]="images/b15.png"
+		
 
-var preload=new Array()
+<div class="col-md-6 ">
 
-for (n=0;n<randomimages.length;n++)
-{
-	preload[n]=new Image()
-	preload[n].src=randomimages[n]
-}
+					<div class="as1">as1</div>
+					</div>
 
-document.write('<img name="defaultimage" class="imgsizer" style="margin-top:30px;" src="'+randomimages[Math.floor(Math.random()*(randomimages.length))]+'">')
 
-function rotateimage()
-{
+<div class="col-md-6">
 
-if (curindex==(tempindex=Math.floor(Math.random()*(randomimages.length)))){
-curindex=curindex==0? 1 : curindex-1
-}
-else
-curindex=tempindex
+					<div class="as2">
+					<img src="images/as2-icon.png">
 
-	document.images.defaultimage.src=randomimages[curindex]
-}
 
-setInterval("rotateimage()",delay)
+					</div>
+					</div>
 
-</script>
+				
+				
+					
 
-<!--<p align="center">This free script provided by<br />
-<a href="http://javascriptkit.com">JavaScript
-Kit</a></p>-->
+		
+
+<div class="col-md-6">
+
+					<div class="as3">
+					
+					</div>
+					</div>
+
+
+<div class="col-md-6">
+
+					<div class="as4">
+						<img src="images/as3-icon.png">
+						</div>
+					</div>
+
+				
+
+
+					<div class=" col-md-12"
+
+					>
+
+					
+						<!--<h2 class="content-sub-heading">Default Page Colour</h2>
+						<p>Default page colour is <code>$brand-color</code>.</p>
+						<h3 class="content-sub-heading">Other Page Colours</h3>-->
+						<!-- <div class="tile-wrap tile-wrap-animation">
+						<div class="col-md-6">
+							<a class="tile" href="products.html">
+								<div class="">
+									<img class="" src="images/p.png" alt="" /><span  style="font-size:20px;margin-left:5px;">News & Press </span><span class="icon icon-keyboard-arrow-right pull-right" style="color:#ec2127;margin-top:10px;"></span>
+								</div>
+							</a>
+							</div>
+							<p> </p>
+
+							<div class="col-md-6">
+							<a class="tile" href="makeaccount.html">
+								<div class="tile-inner">
+									<img class="" src="images/oc.png" alt="" /><span  style="font-size:20px;margin-left:5px;">Products</span><span class="icon icon-keyboard-arrow-right pull-right" style="color:#ec2127;margin-top:-5px;"></span>
+								</div>
+							</a>
+							</div>
+							<p> </p>
+							<a class="tile" href="live.html">
+								<div class="tile-inner">
+										<img class="" src="images/ch.png" alt="" /><span  style="font-size:20px;margin-left:5px;">Buy Insurance</span><span class="icon icon-keyboard-arrow-right pull-right" style="color:#ec2127;margin-top:10px;"></span>
+								</div>
+							</a>
+							<p> </p>
+							
+							<a class="tile" href="atm.html">
+								<div class="tile-inner">
+									<img class="" src="images/l.png" alt="" /><span  style="font-size:20px;margin-left:5px;">Branch Locator </span><span class="icon icon-keyboard-arrow-right pull-right" style="color:#ec2127;margin-top:10px;"></span>
+								</div>
+							</a>
+							<p> </p>
+							<a class="tile" href="request.html">
+								<div class="tile-inner">
+									<img class="" src="images/l.png" alt="" /><span  style="font-size:20px;margin-left:5px;">Insurance Request</span><span class="icon icon-keyboard-arrow-right pull-right" style="color:#ef7f22;margin-top:10px;"></span>
+								</div>
+							</a>
+							<p> </p>
+							
+							
+							
+							
+						</div> -->
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
-
-	
 <!--	<footer class="footer">
 		<div class="container">
 			<p>Material</p>
 		</div>
 	</footer>-->
 	<div class="fbtn-container">
-		<div class="footer fixed" style="width:100%;height:60px;position:fixed;bottom:0;backround:#fff;box=shadow: 0 0 0 0.8"><a href="main.html"><p style="font-size:25px;float:right;margin-right:10px;line-height:15px">Skip </p></a></div>
-		<!--<div class="fbtn-inner">
+		<div class="fbtn-inner">
 			<a class="fbtn fbtn-red fbtn-lg" data-toggle="dropdown"><span class="fbtn-text">Links</span><span class="fbtn-ori icon icon-open-in-new"></span><span class="fbtn-sub icon icon-close"></span></a>
 			<div class="fbtn-dropdown">
-				<a class="fbtn" href="https://github.com/Daemonite/material" target="_blank"><span class="fbtn-text">Make a Request</span><span class="icon icon-content-paste"></span></a> 
-				<a class="fbtn fbtn-blue" href="https://twitter.com/daemonites" target="_blank"><span class="fbtn-text">Open An Account</span><span class="icon icon-folder-open"></span></a>
-				<a class="fbtn fbtn-alt" href="http://www.daemon.com.au/" target="_blank"><span class="fbtn-text">Tap to Call</span><span class="icon icon-phone"></span></a>
+			 <a class="fbtn" href="request.html" ><span class="fbtn-text">Make Claims</span><span class="icon icon-content-paste"></span></a>  
+				<a class="fbtn fbtn-blue" href="https://app.purechat.com/VisitorWidget/ChatWindow?widgetId=17dd2f0c-5d53-4d00-b016-87735488cd8d&userId=undefined&displayName=undefined&authToken=undefined&roomId=undefined&chatId=undefined&origin=http%3A%2F%2Fwww.starassurance.com%2FHome.aspx" ><span class="fbtn-text">Live chat</span><span class="icon icon-folder-open"></span></a>
+				<a class="fbtn fbtn-alt" href="tel:+233267141981" ><span class="fbtn-text">Tap to Call</span><span class="icon icon-phone"></span></a>
 			</div>
-		</div>-->
+		</div>
 	</div>
-
-
 
 	<script src="js/base.min.js" type="text/javascript"></script>
 </body>
